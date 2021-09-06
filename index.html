@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <section class="container mt-5">
+        <div class="row ">
+          <div class="col-md-6 ">
+            <div class=" px-1">
+              <img class="w-100" src="img/mac.png" alt="">
+            </div>
+            <div class="">
+              <!-- Button trigger modal -->
+              <div class="pt-5 text-center">
+                <button type="button" class="btn btn-primary text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  View gallery
+                </button>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">iMac Photo Gallery</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner ">
+                          <div class="carousel-item active">
+                            <img src="img/gallery-1.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/gallery-2.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/gallery-3.jpeg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
+                          <span class="visually-hidden ">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
+                          <span class="visually-hidden ">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+            <div class="col-md-6">
+                 <h1 class="fs-1 text-bold text-info pb-3">Customize your Blue 24‑inch iMac with Apple M1 chip.</h1>
+                 <p class="py-3">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine</p>
+                <!-- Memory Button -->
+                 <div class="py-4">
+                     <h4 class="">Memory</h4>
+                    <button onclick="updatePrice('8gb')" class="btn btn-outline-warning text-black">8GB unified Memory</button>
+                    <button onclick="updatePrice('16gb')" class="btn btn-outline-warning text-black">16GB unified Memory</button>
+                </div>
+                <!-- Storage Button-->
+                 <div class="py-4">
+                    <h4>Storage</h4>
+                    <button onclick="updatePrice('256gb')" class="btn btn-outline-warning text-black py-2">256GB SSD storage</button>
+                    <button onclick="updatePrice('512gb')" class="btn btn-outline-warning text-black">512GB SSD storage</button>
+                    <button onclick="updatePrice('1tb')" class="btn btn-outline-warning text-black">1TB SSD storage</button>
+                 </div>
+                 <!-- Delivery Button-->
+                 <div class="py-4">
+                    <h4>Choose your delivery option</h4>
+                    <button onclick="updatePrice('free-delivery')"  class="btn btn-outline-warning text-black my-2">Friday, Aug 25 FREE Prime Delivery</button>
+                    <button onclick="updatePrice('cost-delivery')"  class="btn btn-outline-warning text-black ">Friday, Aug 21 FREE Delivery sharge $20</button>
+                 </div>
+                 <table class="table w-50">
+                    <tbody>
+                      <tr>
+                        <td class="fw-bolder">Best Price</td>
+                        <td class="fw-bold">$ <span id="best-price">1299</span></td>
+                      </tr>
+                      <tr>
+                        <td class="fw-bolder">Extra Memory Cost</td>
+                        <td class="fw-bold">$ <span id="memory-cost">0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="fw-bolder">Extra Storage Cost</td>
+                        <td class="fw-bold">$ <span id="storage-cost">0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="fw-bolder">Delivery Charge</td>
+                        <td class="fw-bold">$ <span id="delivery-cost">0</span></td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="fw-bolder">Total Price</td>
+                            <td class="fw-bold">$ <span id="total-cost">1299</span></td>
+                          </tr>
+                    </tfoot>
+                  </table>
+
+                  <!-- Promo Code -->
+
+                  <div class="w-50 py-4">
+                      <h4>Add Promo Code</h4>
+                      <span class="text-danger fw-bold">Use to Promo Code Discount 20% </span>
+                      <span class="text-success fw-bold">"stevekaku" </span>
+                      <div class="d-flex">
+                        <input id="coupon-code" class="form-control" type="text">
+                        <button onclick="couponCode()" class="btn btn-outline-danger text-black">Apply</button>
+                      </div>
+                      
+
+                  </div>
+            </div>
+        </div>
+        <hr>
+        <h1 class="text-center">Total: $ <span id="discount-total-price">1299</span></h1>
+    </section>
+
+    <!-- Main JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
